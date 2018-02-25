@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Stores App</string>
+
+    <string name="picture">Picture</string>
+    <string name="description_info">Info</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="error_service_title_string">Ooops.</string>
+    <string name="error_service_stores_msg_string">Parece que algo deu errado no consumo do servico, vamos usar um mock =D</string>
+    <string name="ok_string">Ok</string>
+    <string name="chose_image_option_title_string">Escolha uma opção</string>
+    <string name="open_camera_string">abrir camera</string>
+    <string name="open_gallery_string">abrir galeria</string>
+    <string name="no_telephone_number_added_string">Infelizmente a loja não possui telefone.</string>
+    <string name="take_new_pic_string">Tirar nova foto</string>
+    <string name="select_new_pic_from_gallery">Selecionar da galeria</string>
+</resources>

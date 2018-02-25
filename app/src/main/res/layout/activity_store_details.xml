@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/store_details_coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context="com.joaopaulodribeiro.storesapp.page.StoreDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/details_layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/first_card"
+            android:layout_width="match_parent"
+            android:layout_height="238dp">
+
+                <ImageView
+                    android:id="@+id/store_details_preview_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerCrop"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:id="@+id/store_details_preview_no_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/take_photo_image_view"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/cal_camera_ic"/>
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_alignEnd="@id/take_photo_image_view"
+                            android:layout_alignBottom="@id/take_photo_image_view"
+                            android:layout_height="25dp"
+                            android:src="@drawable/plus_icon"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="1.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="25dp"
+                        android:background="@color/grey_light"/>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/call_gallery_image_view"
+                            android:layout_centerInParent="true"
+                            android:layout_width="75dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:src="@drawable/call_gallery_ic" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_alignEnd="@id/call_gallery_image_view"
+                            android:layout_alignBottom="@id/call_gallery_image_view"
+                            android:layout_height="25dp"
+                            android:src="@drawable/plus_icon"/>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:paddingLeft="18dp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:background="@drawable/gradiente_black_shape">
+
+                    <TextView
+                        android:id="@+id/store_details_id_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/store_details_name_tv"
+                        android:layout_below="@id/store_details_id_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="@color/white"
+                        android:textSize="28sp" />
+                </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/first_card">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/sec_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="8dp"
+                android:layout_margin="16dp"
+                android:layout_marginTop="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:id="@+id/location_icon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/location_color_ic"/>
+
+                    <TextView
+                        android:id="@+id/store_details_address_label_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_alignBottom="@id/location_icon"
+                        android:layout_toEndOf="@id/location_icon"
+                        android:fontFamily="@font/roboto_black"
+                        android:text="ENDEREÇO"
+                        android:textSize="18sp" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/logr_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/store_details_address_label_tv"
+                        android:layout_toEndOf="@+id/location_icon"
+                        android:padding="12dp">
+
+
+                        <LinearLayout
+                            android:id="@+id/complement_inner_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/complement_image"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:id="@+id/store_details_logr_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/logr_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:alpha="0.4"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:text="Logradouro"
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/item_layout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_weight="0.6"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:id="@+id/store_details_number_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/number_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:alpha="0.4"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:text="Número"
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/logr_separator"
+                            android:layout_width="match_parent"
+                            android:layout_height="1.5dp"
+                            android:layout_alignStart="@id/complement_inner_layout"
+                            android:layout_below="@id/complement_inner_layout"
+                            android:layout_marginTop="12dp"
+                            android:background="@color/grey_light" />
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/complement_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/logr_layout"
+                        android:layout_alignStart="@id/logr_layout"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="12dp">
+
+
+                        <LinearLayout
+                            android:id="@+id/complement_inner_layout_"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:layout_marginStart="12dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:id="@+id/store_details_complement_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:layout_marginTop="8dp"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/complement_label"
+                                    android:textSize="13sp"
+                                    android:text="Complemento"
+                                    android:alpha="0.4"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/neighbo_layout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:gravity="center_vertical"
+                                android:layout_marginStart="12dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:id="@+id/store_details_neig_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:layout_marginTop="8dp"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/neigh_label"
+                                    android:textSize="13sp"
+                                    android:text="Bairro"
+                                    android:alpha="0.4"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/complement_separator"
+                            android:layout_below="@id/complement_inner_layout_"
+                            android:layout_alignStart="@id/complement_inner_layout_"
+                            android:layout_marginTop="12dp"
+                            android:background="@color/grey_light"
+                            android:layout_width="match_parent"
+                            android:layout_height="1.5dp"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_telephone"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:src="@drawable/ic_phone_white_48px"
+        app:backgroundTint="@color/green_call"
+        app:layout_anchor="@id/first_card"
+        android:layout_marginRight="28dp"
+        app:layout_anchorGravity="bottom|right"/>
+
+</android.support.design.widget.CoordinatorLayout>
